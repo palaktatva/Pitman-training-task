@@ -1,0 +1,218 @@
+
+
+@font-face {
+    font-family: 'gothambook-normal';
+    src: url('../fonts/GothamBook.eot');
+    src: url('../fonts/GothamBook.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamBook.woff2') format('woff2'),
+        url('../fonts/GothamBook.woff') format('woff'),
+        url('../fonts/GothamBook.ttf') format('truetype'),
+        url('../fonts/GothamBook.svg#GothamBook') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'gothambook-light ';
+    src: url('../fonts/Gotham-Light.eot');
+    src: url('../fonts/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gotham-Light.woff2') format('woff2'),
+        url('../fonts/Gotham-Light.woff') format('woff'),
+        url('../fonts/Gotham-Light.ttf') format('truetype'),
+        url('../fonts/Gotham-Light.svg#Gotham-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'gothambook-medium';
+    src: url('../fonts/GothamMedium.eot');
+    src: url('../fonts/GothamMedium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GothamMedium.woff2') format('woff2'),
+        url('../fonts/GothamMedium.woff') format('woff'),
+        url('../fonts/GothamMedium.ttf') format('truetype'),
+        url('../fonts/GothamMedium.svg#GothamMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'gothambook-bold' ;
+    src: url('../fonts/Gotham-Bold.eot');
+    src: url('../fonts/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gotham-Bold.woff2') format('woff2'),
+        url('../fonts/Gotham-Bold.woff') format('woff'),
+        url('../fonts/Gotham-Bold.eot') format('truetype'),
+        url('../fonts/Gotham-Bold.svg#GothamBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* global css */
+body{
+    font-family: "gotham-book-normal";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* header css */
+
+.header-site{
+    background-color: #fff;
+}
+
+.header-site .header-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-site .nav-wrap ul{
+    display: flex;
+    list-style: none;
+    gap: 33px;
+}
+
+.nav-wrap ul li a{
+    color: #252B33;
+    font-size: 18px;
+    text-decoration: none;
+}
+.contact-detail ul{
+    list-style-type: none;
+}
+
+.contact-detail ul li a{
+    font-family: "gothambook-bold";
+    
+    font-size: 20px;
+    color: #005896;
+    text-decoration: none;
+}
+.container{
+    /* max-width: 1500px; */
+    /* margin:  0 auto; */
+}
+/* banner-section css */
+
+.banner-image img{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+}
+.banner-section{
+    position: relative;
+}
+.banner-section  .content-wrap{
+    margin: 0 auto;
+    padding: 0 30px;
+    position: absolute;
+    top: 90px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+}
+.banner-section .banner-content{
+    flex: 0 0 50%;
+    max-width: 500px;
+}
+.banner-content p:not(:last-child){
+    color: #fff;
+    font-size: 24px;
+}
+.banner-content p:last-child{
+    color: #fff;
+    font-size: 20px;
+}
+.banner-content h1{
+    margin: 20px 0;
+    color: #fff;
+    font-size: 40px;
+}
+.banner-section .banner-form{
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    flex: 0 0 50%;
+    max-width: 500px;
+}
+
+.banner-form .form-outer-wrap{
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 20px;
+}
+.banner-form .form-outer-wrap .form-inner-wrap label{
+ display: none;
+}
+.banner-form .form-outer-wrap .form-inner-wrap{
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding: 0 12px;
+    margin-bottom: 22px;
+}
+.banner-form .form-outer-wrap .form-inner-half-wrap{
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+.banner-form .form-outer-wrap.form-inner-wrap ::placeholder{
+    color: #252B33;
+    font-size: 14px;
+}
+.banner-form .form-outer-wrap .form-inner-wrap .textarea-control{
+height:65px ;
+resize: none;
+}
+.banner-form .form-outer-wrap .form-inner-wrap .form-control {
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #D4D4D4;
+    padding-bottom: 20px;
+}
+.banner-form .form-outer-wrap .form-inner-wrap .form-btn{
+   
+    border-radius: 22px;
+    color: #fff;
+    background-color: #EA7024;
+    height: 41px;
+    width: 100%;
+    margin-bottom: -22px;
+    border: none;
+}
+.banner-section .banner-form h2{
+ text-align: center;
+ font-size: 36px;
+}
+.banner-section .banner-form p{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+   }
+
+
+   /* reviwe-section css */
+
+.review-section .container{
+    max-width: 461px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.review-section .content-wrap{
+    text-align: center;
+}
