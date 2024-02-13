@@ -53,9 +53,6 @@
 
 
 /* global css */
-body {
-    font-family: "gotham-book-normal";
-}
 
 * {
     margin: 0;
@@ -92,6 +89,7 @@ body {
 .nav-wrap ul li a {
     color: #252B33;
     font-size: 18px;
+    font-family:'gothambook-light';
     text-decoration: none;
 }
 
@@ -101,7 +99,6 @@ body {
 
 .contact-detail ul li a {
     font-family: "gothambook-bold";
-
     font-size: 20px;
     color: #005896;
     text-decoration: none;
@@ -138,14 +135,18 @@ body {
 .banner-content p:not(:last-child) {
     color: #fff;
     font-size: 24px;
+    font-family: 'gothambook-medium';
+    
 }
 
 .banner-content p:last-child {
+    font-family: 'gothambook-light';
     color: #fff;
     font-size: 20px;
 }
 
 .banner-content h1 {
+    font-family: 'gothambook-medium';
     margin: 20px 0;
     color: #fff;
     font-size: 40px;
@@ -373,7 +374,95 @@ h2.has-border::before {
     color: #454C54;
     margin-bottom: -6px;
 }
-.slick-dots li button {
-    background-color: #E7EDEF;
-    border-radius: 50%;
+.slick-dots li button:before{
+    background-color: #fff;
+    color: #4c4545;
+    font-size: 40px;
+    top: 7px;
+    left: 2px;
+}
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #A9CA3F;
+}
+.slick-prev:before{
+    color: #BBBBBB;
+}
+.slick-next:before {
+    color: #BBBBBB;
+}
+
+
+/* Top 10 Reasons css  */
+
+.top-reasons{
+    background-color: #F6F6F6;
+}
+.top-reasons .content-wrap{
+    padding: 50px 0;
+}
+.top-reasons .content-wrap h2{
+    color: #252B33;
+}
+.top-reasons h2.has-border::after {
+    background-color: #A9CA3F;
+}
+
+.top-reasons h2.has-border::before {
+    background-color: #A9CA3F;
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .accordin-title{
+    position: relative      ;
+    font-size: 18px;
+    color: #252B33;
+    font-family: 'gothambook-light' ;
+    background-color: #fff;
+    padding: 20px
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .accordin-title:not(:last-child){
+    margin-bottom: 25px;
+    margin-right: 48px;
+}
+.top-reasons-accordin-inner-wrapper .accordin-content{
+    display: none;
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .accordin-title::after{
+    content: '';
+    background-image: url(../images/Vector.svg);
+    position: absolute;
+    right: 25px;
+    top: 25%;
+    width: 25px;
+    height: 23px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 5px;
+}
+.top-reasons .top-reasons-accordin-outer-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    align-items: center;
+    
+}
+.top-reasons .top-reasons-accordin-outer-wrapper .top-reasons-accordin-inner-wrapper{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .accordin-content{
+    background-color: #fff;
+    border-top: 2px solid #EEEEEE;
+    max-width: 572px;
+    padding: 20px;
+    margin-top:-25px;
+    margin-bottom: 10px;
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .accordin-content p{
+    font-size:16px;
+    font-family:'gothambook-light';
+    color: #252B33;
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .active .accordin-title::after{
+    transform: rotate(180deg);
 }
