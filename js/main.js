@@ -7,7 +7,7 @@ jQuery(document).ready(function(){
     slidesToScroll: 4,
   });
 
-  $('.accordin-title').click(function(){
+  $('.accordin-title').dblclick(function(){
     $(this).closest('.top-reasons-accordin-inner-wrapper').find('.accordin-content').slideToggle()
     $(this).closest('.top-reasons-accordin-inner-wrapper').siblings().find('.accordin-content').slideUp()
     $(this).closest('.top-reasons-accordin-inner-wrapper').find('.accordin-items').toggleClass("active");

@@ -147,7 +147,7 @@
 
 .banner-content h1 {
     font-family: 'gothambook-medium';
-    margin: 20px 0;
+    padding: 20px 0;
     color: #fff;
     font-size: 40px;
 }
@@ -260,29 +260,28 @@ h2 {
 h2.has-border {
     position: relative;
     line-height: 1.3;
-    padding-bottom: 50px;
+    padding-bottom: 17px;
+    margin-bottom: 46px;
 }
 
 h2.has-border::after {
     position: absolute;
     content: '';
-    margin-top: 70px;
     left: 47%;
     width: 65px;
     height: 4px;
-    background-color: #fff;
     border-radius: 10px;
+    bottom: 0;
 }
 
 h2.has-border::before {
     position: absolute;
     content: '';
-    margin-top: 70px;
     left: 53%;
     width: 5px;
     height: 4px;
-    background-color: #fff;
     border-radius: 50%;
+    bottom: 0;
 }
 
 .our-centers .content-wrap {
@@ -333,6 +332,7 @@ h2.has-border::before {
 
 .our-team-section .our-team-content{
     text-align: center;
+    margin-bottom: 36px;
 }
 
 .our-team-section .our-team-content p {
@@ -352,13 +352,21 @@ h2.has-border::before {
     border: 2px solid #dadada;
     border-radius: 22px;
     padding: 30px;
-    margin: 33px 11px 0px 11px ;
 }
-
+.our-team-slider-outer-wrapper .img-block{
+    padding-bottom: 110%;
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+}
 .our-team-slider-outer-wrapper img{
-    width: 100%;
-    height: auto;
-    padding-bottom: 30px;
+    position: absolute;
+    height: 100%;
+    top: 0; 
+    left: 0;
+
+    
 }
 .our-team-slider-outer-wrapper h3{
     text-align: center;
@@ -466,3 +474,8 @@ h2.has-border::before {
 .top-reasons .top-reasons-accordin-inner-wrapper .active .accordin-title::after{
     transform: rotate(180deg);
 }
+
+     
+
+/* categories-section css */
+
