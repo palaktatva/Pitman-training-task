@@ -89,7 +89,6 @@ body {
     font-weight: 325;
     color: #252B33;
     font-size: 16px;
-    font-weight: 325;
 }
 
 
@@ -359,8 +358,10 @@ h1 {
 
 .our-centers {
     background-color: #005896;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    /* border-top-left-radius: 30px;
+    border-top-right-radius: 40px; */
 }
 
 
@@ -384,21 +385,14 @@ h2.has-border {
 h2.has-border::after {
     position: absolute;
     content: '';
-    left: 47%;
-    width: 60px;
+    left: 50%;
+    width: 70px;
     height: 5px;
     border-radius: 100px;
+    background-repeat: no-repeat;
     bottom: 0;
-}
-
-h2.has-border::before {
-    position: absolute;
-    content: '';
-    left: 53%;
-    width: 5px;
-    height: 5px;
-    border-radius: 100px;
-    bottom: 0;
+    transform: translateX(-50%);
+    background-image: url(../images/border.svg);
 }
 
 .our-centers .content-wrap {
@@ -443,13 +437,13 @@ h2.has-border::before {
     color: #252B33;
 }
 
-.our-team-section h2.has-border::after {
+/* .our-team-section h2.has-border::after {
     background-color: #A9CA3F;
 }
 
 .our-team-section h2.has-border::before {
     background-color: #A9CA3F;
-}
+} */
 
 .our-team-section .our-team-content {
     text-align: center;
@@ -562,14 +556,6 @@ h2.has-border::before {
     padding: 30px 0;
 }
 
-h2.has-border::after {
-    background-color: #A9CA3F;
-}
-
-h2.has-border::before {
-    background-color: #A9CA3F;
-}
-
 .top-reasons .top-reasons-accordin-inner-wrapper .accordin-title {
     position: relative;
     font-size: 18px;
@@ -646,7 +632,7 @@ h2.has-border::before {
 /* categories-section css */
 
 .categories-section {
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .categories-section ul {
@@ -663,7 +649,7 @@ h2.has-border::before {
 
 }
 .categories-section  h2.has-border {
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 .categories-section ul li::before {
@@ -674,6 +660,8 @@ h2.has-border::before {
     background-repeat: no-repeat;
     left: -13px;
     top: 5px;
+    width: 15px;
+    height: 15px;
 }
 
 .categories-section .categories-section-inner-wrapper {
@@ -685,11 +673,16 @@ h2.has-border::before {
 
 .pitman-trainees-section {
     background-color: #005896;
-    padding: 45px 0;
-    position: relative;
-
 }
-
+.pitman-trainees-section  .content-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+}
+.pitman-trainees-section  .content-wrap .pitman-traine-right-side{
+    padding: 45px 0;
+}
 .pitman-trainees-section p {
     font-size: 30px;
     font-weight: 550;
@@ -709,14 +702,12 @@ h2.has-border::before {
 }
 
 .pitman-trainees-section .image-block {
-    position: absolute;
-    right: 6.4%;
-    height: calc(100% + 38px);
-    bottom: 0;
+    margin-top: -38px;
 }
 
 .pitman-trainees-section .image-block img {
     height: 100%;
+    display: block;
 }
 
 
@@ -725,20 +716,16 @@ h2.has-border::before {
 .footer-site {
     padding: 35px 0 25px;
 }
-.footer-site span{
-    display: block;
-}
 .footer-site .footer-col-layout-wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -15px;
     padding: 30px 0;
 }
 
 .footer-site .col-layout-right-side {
     flex: 0 0 25%;
     max-width: 25%;
-    padding: 0 15px;
+    padding: 0 30px;
 }
 .footer-site .col-layout-right-side .content-wrapper{
     display: flex;
@@ -754,22 +741,33 @@ h2.has-border::before {
 .footer-site .col-layout-left-side {
     flex: 0 0 75%;
     max-width: 75%;
-    padding: 0 15px;
+    padding: 0 30px;
    
 
 }
 .footer-site .col-layout-left-side .col-layout-left-inner-wrapper{
-    margin: 0 -20px;
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 -21px;
+}
+.footer-site .col-layout-left-inner-wrapper .col-layout-left-inner{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 21px;
+}
+.footer-site .col-layout-left-inner-wrapper .col-layout-left-inner .col-layout-wrapper{
+    display: flex;
+    margin: 0 -21px;
 }
 
 .footer-site .col-layout-left-side .col-layout {
-    flex: 0 0 25%;
-    max-width: 25%;
-    padding: 0 20px;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 21px;
+    position: relative;
 }
 
-.footer-site .col-layout-right-side .inner-content-wrapper img {
+.footer-site .col-layout-right-side .contact-number img {
     display: inline-block;
     vertical-align: middle;
     margin-right: 5px;
@@ -789,6 +787,7 @@ h2.has-border::before {
     color:#4A4A4A;
     font-style: normal;
     line-height: 1.6;
+    max-width: 235px;
     margin: 25px 0 ;
 }
 
@@ -815,11 +814,12 @@ h2.has-border::before {
 .footer-site .col-layout-left-side .footer-menu-title a{
     color:#4A4A4A;
     font-family: 'gothambook-medium';
-    margin-bottom: 25px;
+    margin-bottom: 23px;
 }
 .footer-site .col-layout-left-side .footer-listing li a{
     color: #4A4A4A;
-    line-height: 2.1;
+    padding: 8px 0;
+    line-height: 1.2;
     font-family: 'gothambook-normal';
 }
 
@@ -832,13 +832,25 @@ h2.has-border::before {
 .footer-site .footer-bottom p{
 text-align: center;
 font-size: 14px;
-line-height: 2.2;
+}
+.footer-site .col-layout-left-side .col-layout .footer-listing {
+    transition: 0.5s all;
+}
+.footer-site .col-layout-left-side .footer-menu-title .down-arrow{
+position: absolute;
+top: 0;
+right: 0;
+display: none;
+transition: 0.5s all;
 }
 
 
-
 /* ----------------------------------------------media-Query----------------------------------------------*/
-
+@media (max-width:1399px) {
+    .pitman-trainees-section p {
+        font-size: 28px;
+}
+}
 @media (max-width:1199px){
     .header-site .header-wrap {
         padding: 20px;
@@ -853,7 +865,7 @@ line-height: 2.2;
     padding: 0 30px;
 }
 .banner-section .banner-form h2 {
-    font-size: 26px;
+    font-size: 28px;
 }
 h1 {
     font-size: 36px;
@@ -880,14 +892,8 @@ h1 {
 .categories-section {
     padding: 30px 0;
 }
-.pitman-trainees-section {
-    padding: 30px 0;
-}
 .footer-site {
     padding: 30px 0 20px;
-}
-.our-centers h2.has-border {
-    margin-bottom: 36px;
 }
 .our-team-section h2.has-border {
     margin-bottom: 30px;
@@ -914,6 +920,47 @@ h2 {
 .banner-section .banner-content span {
     display: inline;
 }
+.our-centers .content-wrap .our-centers-list .list-item .list-item-inner {
+    padding: 25px;
+    font-size:20px;
+}
+.our-centers .content-wrap .our-centers-list .list-item {
+    margin: 10px;
+}
+.footer-site .footer-col-layout-wrapper {
+    padding: 10px 0 20px;
+}
+.footer-site .col-layout-left-side .footer-menu-title a {
+    margin-bottom: 20px;
+}
+.footer-site .col-layout-right-side .logo {
+    margin-bottom: 30px;
+}
+.footer-site .col-layout-right-side .inner-content-wrapper address {
+    margin: 20px 0;
+    line-height: 1.4;
+}
+.footer-site .col-layout-right-side .contact-number img {
+    max-width: 25px;
+    margin-right: 0;
+}
+.pitman-trainees-section .content-wrap .pitman-traine-right-side {
+    padding: 30px 0;
+}
+.footer-site .col-layout-right-side {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+.footer-site .col-layout-right-side .content-wrapper {
+    align-items: center;
+    text-align: center;
+}
+.footer-site .col-layout-left-side {
+    flex: 0 0 100%;
+    max-width: 100%;
+
+}
 }
 
 @media (max-width:1024px){
@@ -924,16 +971,49 @@ h2 {
         font-size: 32px;
     }
     .banner-section .banner-form h2 {
-        font-size: 24px;
+        font-size: 26px;
     }
     h2.has-border::before {
         left: 54%;
     }
     .footer-site .col-layout-right-side .inner-content-wrapper a {
-        font-size: 24px;
+        font-size: 22px;
     }
     .pitman-trainees-section p {
-        font-size: 22px;
+        font-size: 24px;
+    }
+    .contact-detail ul li a span {
+        font-size: 18px;
+    }
+    .our-centers h2.has-border {
+        margin-bottom: 25px;
+    }
+    .our-team-section h2.has-border {
+        margin-bottom: 25px;
+    }
+    .top-reasons .has-border {
+        margin-bottom: 25px;
+    }
+    .our-team-section .our-team-content {
+        margin-bottom: 30px;
+    }
+    .categories-section h2.has-border {
+        margin-bottom: 25px;
+    }
+    .slick-dotted.slick-slider {
+        margin: 30px;
+    }
+    .our-team-slider-outer-wrapper .slider-item-inner {
+        padding: 20px;
+    }
+    .our-team-slider-outer-wrapper .slider-item {
+        padding: 0 10px;
+    }
+    .top-resons-wrapper .top-resons-inner-wrapper {
+        padding: 0 15px;
+    }
+    .top-resons-wrapper {
+        margin: 0 -15px;
     }
     
 }
@@ -942,25 +1022,28 @@ h2 {
         font-size: 28px;
     }
     h2 {
-        font-size: 28px;
+        font-size: 24px;
+    }
+    .container {
+        padding: 0 15px;
     }
     .banner-section .banner-form h2 {
         font-size: 22px;
     }
-    .pitman-trainees-section p {
-        font-size: 20px;
-    }
-    h2.has-border::before {
-        left: 55%;
-    }
     .footer-site .col-layout-right-side .inner-content-wrapper a {
-        font-size: 22px;
+        font-size: 18px;
         margin-right: 0;
     }
     .contact-detail ul li a {
         font-size: 16px;
     }
     .header-wrap .nav-wrap ul li a {
+        font-size: 16px;
+    }
+    .our-team-section .our-team-content p {
+        font-size: 16px;
+    }
+    .top-reasons .top-reasons-accordin-inner-wrapper .accordin-title {
         font-size: 16px;
     }
     .header-site .logo {
@@ -973,6 +1056,9 @@ h2 {
     .banner-content p:last-child {
         font-size: 18px;
     }
+    .categories-section ul li {
+        font-size: 18px;
+    }
     .banner-content .image-block {
         margin-bottom: 15px;
     }
@@ -983,7 +1069,38 @@ h2 {
     .banner-section {
         padding: 50px 0 11%;
     }
+    .review-section p {
+        font-size: 20px;
+        margin-bottom: 10px;
 
+}
+.footer-site .col-layout-right-side .logo {
+    margin-bottom: 25px;
+}
+.categories-section .categories-section-inner-wrapper {
+    padding: 0 15px;
+}
+.review-section .review-image-block img{
+    max-width: 140px;
+}
+.footer-site .col-layout-right-side .contact-number img {
+    max-width: 20px;
+}
+.footer-site .col-layout-left-side .footer-menu-title a {
+    margin-bottom: 15px;
+}
+
+.pitman-trainees-section .content-wrap .pitman-traine-right-side {
+    padding: 20px 0;
+}
+.pitman-trainees-section p {
+    font-size: 22px;
+}
+.footer-site .col-layout-left-inner-wrapper .col-layout-left-inner {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
 }
 @media (max-width:820px){
     .banner-section .content-wrap {
@@ -1072,10 +1189,89 @@ h2 {
         transition: all 0.5s;
        }
        
-       .body .open-menu{
+       .open-menu{
         overflow: hidden;
     }
-    
+
+    .header-wrap .nav-wrap ul li a {
+        font-size: 18px;
+        padding: 15px 30px;
+    }
+    .header-site .nav-wrap ul {
+        display: inline-block;
+    }
+    .our-centers h2.has-border {
+        margin-bottom: 20px;
+    }
+    .our-centers .content-wrap .our-centers-list .list-item .list-item-inner {
+        padding: 20px;
+        font-size: 18px;
+    }
+    .our-team-section h2.has-border {
+        margin-bottom: 20px;
+    }
+    .our-team-section .our-team-content {
+        margin-bottom: 20px;
+    }
+    .top-reasons .has-border {
+        margin-bottom: 20px;
+    }
+    .categories-section h2.has-border {
+        margin-bottom: 20px;
+    }
+    .slick-dotted.slick-slider {
+        margin: 10px;
+    }
+    .top-resons-wrapper .top-resons-inner-wrapper {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .top-resons-wrapper {
+        flex-wrap: wrap;   
+     }
+     .top-resons-wrapper .top-resons-inner-wrapper .accordin-title {
+        margin-bottom: 20px;
+    }
+    .top-reasons .top-reasons-accordin-inner-wrapper .accordin-content {
+        margin: -20px 0 20px;
+    }
+    .categories-section ul li {
+        margin-bottom: 30px;
+    }
+    .categories-section ul {
+        column-count: 2;
+    }
+    .pitman-trainees-section p {
+        font-size: 18px;
+    }
+    .pitman-trainees-section .content-wrap .pitman-traine-right-side {
+        padding: 15px 0;
+    }
+    .footer-site .col-layout-left-side .col-layout .footer-listing{
+        display: none;
+    }
+    .footer-site .col-layout-left-inner-wrapper .col-layout-left-inner .col-layout-wrapper {
+        flex-wrap: wrap;
+    }
+    .footer-site .col-layout-left-inner-wrapper .col-layout-left-inner {
+        margin-bottom: 0;
+    }
+    .footer-site .col-layout-left-side .col-layout {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-site .col-layout-left-side .footer-menu-title .down-arrow {
+        display: block;
+    }
+    .footer-site .col-layout-left-side .active.footer-menu-title .down-arrow {
+        transform: rotate(180deg);
+    }
+}
+@media (max-width: 667px){
+    .pitman-trainees-section .image-block img { 
+        display: none;
+    }
 }
 @media (max-width:575px){
     h1 {
@@ -1093,6 +1289,51 @@ h2 {
     .banner-content .image-block img{
         max-width: 120px;
 }
+.banner-section .banner-content {
+    margin-bottom: 20px;
+}
+.banner-section .banner-form {
+    padding: 15px 10px;
+}
+.review-section p {
+    font-size: 18px;
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+.review-section {
+    padding: 20px 0;
+}
+.our-centers .content-wrap {
+    padding: 20px 0;
+}
+.top-reasons .content-wrap {
+    padding: 20px 0;
+}
+.categories-section {
+    padding: 20px 0;
+}
+.footer-site {
+    padding: 20px 0;
+}
+.our-team-section {
+    padding: 20px 0 30px ;
+}
+.our-centers .content-wrap .our-centers-list .list-item .list-item-inner {
+    padding: 15px;
+    font-size: 16px;
+}
+.our-centers .content-wrap .our-centers-list .list-item {
+    margin: 8px;
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .accordin-title {
+    padding: 20px;
+}
+.categories-section ul li {
+    margin-bottom: 20px;
+}
+.categories-section ul {
+    column-count: 1;
+}
 }
 @media (max-width:375px){
     h1 {
@@ -1103,5 +1344,33 @@ h2 {
     }
     .banner-content p:not(:last-child) {
         font-size: 18px;
+    }
+    .review-section p {
+        font-size: 16px;
+        margin-bottom: 0;
+        line-height: 1.3;
+    }
+    .review-section .review-image-block img {
+        max-width: 130px;
+    }
+    .our-centers .content-wrap .our-centers-list .list-item .list-item-inner {
+        font-size: 14px;
+    }
+    .our-centers .content-wrap .our-centers-list .list-item {
+        margin: 5px;
+    }
+    .top-reasons .top-reasons-accordin-inner-wrapper .accordin-title::after {
+        width: 11px;
+        right: 7px;
+        top: 33%;
+    }
+    .top-reasons .top-reasons-accordin-inner-wrapper .accordin-title {
+        padding: 15px;
+    }
+    .top-reasons .top-reasons-accordin-inner-wrapper .accordin-content {
+        padding: 15px;
+    }
+    .categories-section ul li {
+        margin-bottom: 10px;
     }
 }
