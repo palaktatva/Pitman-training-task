@@ -591,18 +591,16 @@ h2.has-border::after {
     margin-bottom: 45px;
 }
 .top-reasons .top-reasons-accordin-inner-wrapper .accordin-title::after {
-    content: '';
+    content: ' ';
     background-image: url(../images/up-arrow.svg);
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 9px;
+    position: absolute;    
+    height: 100%;
+    width: 18px;
+    top: 0;
+    right: 20px;   
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    padding: 4px;
+    background-size: 18px 18px;
     transition: 0.5s all;
 }
 
@@ -682,12 +680,13 @@ h2.has-border::after {
     content: '';
     position: absolute;
     background-image: url(../images/right-mark.svg);
-    background-size: 15px 15px;
+    background-size: 18px 15px;
     background-repeat: no-repeat;
+    /* background-position: 0px 1px; */
     left: 0;
     top: 5px;
-    width: 15px;
-    height: 15px;
+    height: 100%;
+    width: 18px;
 }
 
 
@@ -864,7 +863,11 @@ right: 0;
 display: none;
 transition: 0.5s all;
 }
+.footer-site .col-layout-left-side .footer-menu-title .down-arrow img{
+    display: inline-block;
+    vertical-align: middle;
 
+}
 
 
 /* ----------------------------------------------media-Query----------------------------------------------*/
@@ -882,9 +885,6 @@ transition: 0.5s all;
     }
     .header-site .header-wrap {
         padding: 20px;
-}
-.banner-section {
-    padding: 70px 0 14%;
 }
 .review-section {
     padding: 30px 0;
@@ -1038,6 +1038,9 @@ h2 {
         padding: 0 9px;
         margin-bottom: 15px;
     }
+    .banner-section .banner-form {
+        margin-top: 0;
+    }
     
 }
 @media (min-width:992px){
@@ -1093,9 +1096,6 @@ h2 {
         margin-top: 0;
         
     }
-    .banner-section {
-        padding: 50px 0 11%;
-    }
     .review-section p {
         font-size: 20px;
         margin-bottom: 10px;
@@ -1117,9 +1117,6 @@ h2 {
     margin-bottom: 0;
 }
 
-.pitman-trainees-section .content-wrap .pitman-traine-right-side {
-    padding: 20px 0;
-}
 .pitman-trainees-section p {
     font-size: 22px;
 }
@@ -1286,14 +1283,29 @@ h2 {
     .pitman-trainees-section p {
         font-size: 18px;
     }
-    .pitman-trainees-section .content-wrap .pitman-traine-right-side {
-        padding: 15px 0;
-    }
     .categories-section ul li {
         flex: 0 0 50%;
         max-width: 50%;
 }
 .top-resons-wrapper .top-resons-inner-wrapper .accordin-items {
+    margin-bottom: 15px;
+}
+.footer-site .col-layout-right-side .inner-content-wrapper a {
+    font-size: 22px;
+}
+.footer-site .col-layout-right-side .logo {
+    margin-bottom: 20px;
+}
+.footer-site .col-layout-right-side .inner-content-wrapper address {
+    margin: 15px 0;
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .accordin-title::after {
+    right: 15px;
+}
+h2.has-border {
+    padding-bottom: 15px;
+}
+.footer-site .border-bottom {
     margin-bottom: 15px;
 }
 }
@@ -1329,9 +1341,13 @@ h2 {
     margin-bottom: 0;
 }
 .review-section {
-    padding: 20px 0;
+    /* padding: 20px 0; */
+        padding: 20px 0 10px;
 }
 .our-centers .content-wrap {
+    padding: 20px 0;
+}
+.pitman-trainees-section .content-wrap .pitman-traine-right-side {
     padding: 20px 0;
 }
 .categories-section {
@@ -1400,6 +1416,13 @@ body {
 .banner-form .form-outer-wrap .form-inner-wrap .form-control {
     margin-bottom: 20px;
 }
+.footer-site .footer-bottom p {
+    font-size: 12px;
+}
+.top-reasons .content-wrap {
+    padding: 20px 0 5px;
+}
+
 }
 @media (max-width:375px){
     h1 {
@@ -1421,11 +1444,6 @@ body {
     .our-centers .content-wrap .our-centers-list .list-item .list-item-inner {
         font-size: 14px;
     }
-    .top-reasons .top-reasons-accordin-inner-wrapper .accordin-title::after {
-        width: 11px;
-        right: 7px;
-        top: 33%;
-    }
     .top-reasons .top-reasons-accordin-inner-wrapper .accordin-title {
         padding: 15px;
     }
@@ -1434,5 +1452,8 @@ body {
     }
     .categories-section ul li {
         margin-bottom: 10px;
+    }
+    .footer-site .col-layout-left-side .footer-menu-title .down-arrow img{
+        max-width: 15px;
     }
 }
