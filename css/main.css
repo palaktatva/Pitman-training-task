@@ -155,14 +155,15 @@ body {
 
 /* banner-section  */
 .banner-image img {
-    object-fit: cover;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    object-position: bottom center;
 }
 
 .banner-section {
     position: relative;
-    padding: 90px 0 18.2%;
+    padding: 6.7% 0 18%;
 }
 .banner-section .banner-image{
     position: absolute;
@@ -225,17 +226,22 @@ h1 {
 .banner-section .banner-form {
     flex: 0 0 41%;
     max-width: 41%;
-    padding: 20px 15px 0;
+    padding: 20px 20px 28px;
     background-color: #fff;
     border-radius: 20px;
     height: 100%;
-    margin-top: 24px;
+    margin-top: 20px;
+}
+.banner-section .banner-form .banner-form-inner {    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 }
 
 .banner-form .form-outer-wrap {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
 .banner-form .form-outer-wrap .form-inner-wrap label {
@@ -245,8 +251,8 @@ h1 {
 .banner-form .form-outer-wrap .form-inner-wrap {
     max-width: 100%;
     flex: 0 0 100%;
-    padding: 0 12px;
-    margin-bottom: 35px;
+    padding: 0 10px;
+
 }
 
 .banner-form .form-outer-wrap .form-inner-half-wrap {
@@ -270,6 +276,7 @@ h1 {
     color:#252B33 ;
     font-size: 14px;
     font-family: 'gothambook-light';
+    margin-bottom: 35px;
 }
 .banner-form .form-control::placeholder {
     color:#252B33!important;
@@ -303,23 +310,32 @@ h1 {
     opacity: 1;
 
 }
-
-
-.banner-form .form-outer-wrap .form-inner-wrap .form-btn {
-
+.button-wrapper{
+    width: 100%;
+}
+.banner-section .container {
+    max-width: 1315px;
+}
+.form-btn {
+    font-family: 'gothambook-medium';
+    font-weight: 550;
     border-radius: 22px;
     color: #fff;
     background-color: #EA7024;
     height: 41px;
     width: 100%;
     border: none;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.form-btn:hover{
+    background-color: #246895;
 }
 
 .banner-section .banner-form h2 {
     font-family: 'gothambook-medium';
     font-weight: 550;
     color: #252B33;
-    text-align: center;
     font-size: 30px;
     line-height: 1.2;
     margin-bottom: 5px;
@@ -333,20 +349,23 @@ h1 {
     font-family: 'gothambook-normal';
     max-width: 237px;
     font-size: 14px;
+    margin-bottom: 20px;
 }
 
 
 /* reviwe-section css */
 
 .review-section {
-    max-width: 1220px;
-    margin: 0 auto;
-    padding: 35px 0;
+
+    padding: 40px 0;
+}
+.review-section .container{
+    max-width: 573px
 }
 .review-section p{
     font-size: 22px;
     margin-bottom: 12px;
-    line-height: 1.8;
+    line-height: 1.3;
 }
 
 .review-section .content-wrap {
@@ -378,7 +397,7 @@ h2 {
 h2.has-border {
     position: relative;
     line-height: 1.5;
-    padding-bottom: 17px;
+    padding-bottom: 20px;
     margin-bottom: 20px;
 }
 
@@ -397,24 +416,25 @@ h2.has-border::after {
 
 .our-centers .content-wrap {
     padding: 40px 0;
+    margin: 0 auto;
+    max-width: 740px;
 }
 
 .our-centers .content-wrap .our-centers-list {
     display: flex;
     flex-wrap: wrap;
-    max-width: 888px;
-    margin: 0 auto;
     justify-content: center;
     list-style-type: none;
-    ;
+    margin: 0 -15px;
 }
 .our-centers h2.has-border {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
 
 }
 
 .our-centers .content-wrap .our-centers-list .list-item {
-    margin: 15px;
+    padding: 0 15px;
+    margin-bottom: 23px;
 
 }
 
@@ -574,9 +594,10 @@ h2.has-border::after {
     content: '';
     background-image: url(../images/up-arrow.svg);
     position: absolute;
-    right: 13px;
-    top: 40%;
-    width: 18px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
     height: 9px;
     background-repeat: no-repeat;
     background-position: center;
@@ -600,12 +621,12 @@ h2.has-border::after {
 .top-reasons .top-reasons-accordin-inner-wrapper .accordin-content {
     background-color: #fff;
     border-top: 2px solid #EEEEEE;
-    padding: 20px;
-    margin: -25px 0 25px;
+    padding: 10px 30px 15px 20px;
 }
 
 .top-reasons .top-reasons-accordin-inner-wrapper .accordin-content p {
     font-size: 16px;
+    line-height: 1.2;
 }
 
 .top-reasons .top-reasons-accordin-inner-wrapper .active .accordin-title::after {
@@ -624,7 +645,7 @@ h2.has-border::after {
 
 }
 
-.top-resons-wrapper .top-resons-inner-wrapper .accordin-title {
+.top-resons-wrapper .top-resons-inner-wrapper .accordin-items{
     margin-bottom: 25px;
 }
 
@@ -634,18 +655,23 @@ h2.has-border::after {
 .categories-section {
     padding: 60px 0;
 }
-
+.categories-section .container{
+    max-width: 1315px;
+}
 .categories-section ul {
-    column-count: 3;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
 .categories-section ul li {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
     margin-bottom: 40px;
     position: relative;
     font-size: 20px;
     color: #005896;
-    padding: 0 15px;
+    padding: 0 15px 0 30px;
 
 }
 .categories-section  h2.has-border {
@@ -658,14 +684,10 @@ h2.has-border::after {
     background-image: url(../images/right-mark.svg);
     background-size: 15px 15px;
     background-repeat: no-repeat;
-    left: -13px;
+    left: 0;
     top: 5px;
     width: 15px;
     height: 15px;
-}
-
-.categories-section .categories-section-inner-wrapper {
-    padding: 0 25px;
 }
 
 
@@ -674,10 +696,12 @@ h2.has-border::after {
 .pitman-trainees-section {
     background-color: #005896;
 }
+.pitman-trainees-section .container{
+    max-width: 1325px;
+}
 .pitman-trainees-section  .content-wrap{
     display: flex;
     justify-content: space-between;
-    padding: 0 30px;
     align-items: center;
 }
 .pitman-trainees-section  .content-wrap .pitman-traine-right-side{
@@ -716,16 +740,20 @@ h2.has-border::after {
 .footer-site {
     padding: 35px 0 25px;
 }
+.footer-site .container{
+    max-width: 1360px;
+}
 .footer-site .footer-col-layout-wrapper {
     display: flex;
     flex-wrap: wrap;
     padding: 30px 0;
+    margin: -20px 0;
 }
 
 .footer-site .col-layout-right-side {
     flex: 0 0 25%;
     max-width: 25%;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 .footer-site .col-layout-right-side .content-wrapper{
     display: flex;
@@ -735,35 +763,27 @@ h2.has-border::after {
 }
 
 .footer-site .col-layout-right-side .logo {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
 
 .footer-site .col-layout-left-side {
     flex: 0 0 75%;
     max-width: 75%;
-    padding: 0 30px;
+    padding: 0 20px;
+
    
 
 }
 .footer-site .col-layout-left-side .col-layout-left-inner-wrapper{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -21px;
-}
-.footer-site .col-layout-left-inner-wrapper .col-layout-left-inner{
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 0 21px;
-}
-.footer-site .col-layout-left-inner-wrapper .col-layout-left-inner .col-layout-wrapper{
-    display: flex;
-    margin: 0 -21px;
 }
 
+
 .footer-site .col-layout-left-side .col-layout {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 0 21px;
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-right: 40px;
     position: relative;
 }
 
@@ -821,6 +841,10 @@ h2.has-border::after {
     padding: 8px 0;
     line-height: 1.2;
     font-family: 'gothambook-normal';
+    transition: 0.5s all;
+}
+.footer-site .col-layout-left-side .footer-listing li a:hover{
+    color: #005896
 }
 
 .footer-site .border-bottom{
@@ -833,9 +857,6 @@ h2.has-border::after {
 text-align: center;
 font-size: 14px;
 }
-.footer-site .col-layout-left-side .col-layout .footer-listing {
-    transition: 0.5s all;
-}
 .footer-site .col-layout-left-side .footer-menu-title .down-arrow{
 position: absolute;
 top: 0;
@@ -845,13 +866,20 @@ transition: 0.5s all;
 }
 
 
+
 /* ----------------------------------------------media-Query----------------------------------------------*/
 @media (max-width:1399px) {
     .pitman-trainees-section p {
         font-size: 28px;
 }
+.footer-site .col-layout-right-side .contact-number img {
+    margin-right: 0;
+}
 }
 @media (max-width:1199px){
+    .footer-site .col-layout-right-side .inner-content-wrapper a {
+        font-size: 26px;
+    }
     .header-site .header-wrap {
         padding: 20px;
 }
@@ -924,14 +952,9 @@ h2 {
     padding: 25px;
     font-size:20px;
 }
-.our-centers .content-wrap .our-centers-list .list-item {
-    margin: 10px;
-}
+
 .footer-site .footer-col-layout-wrapper {
     padding: 10px 0 20px;
-}
-.footer-site .col-layout-left-side .footer-menu-title a {
-    margin-bottom: 20px;
 }
 .footer-site .col-layout-right-side .logo {
     margin-bottom: 30px;
@@ -942,7 +965,6 @@ h2 {
 }
 .footer-site .col-layout-right-side .contact-number img {
     max-width: 25px;
-    margin-right: 0;
 }
 .pitman-trainees-section .content-wrap .pitman-traine-right-side {
     padding: 30px 0;
@@ -975,9 +997,6 @@ h2 {
     }
     h2.has-border::before {
         left: 54%;
-    }
-    .footer-site .col-layout-right-side .inner-content-wrapper a {
-        font-size: 22px;
     }
     .pitman-trainees-section p {
         font-size: 24px;
@@ -1015,7 +1034,16 @@ h2 {
     .top-resons-wrapper {
         margin: 0 -15px;
     }
+    .our-centers .content-wrap .our-centers-list .list-item {
+        padding: 0 9px;
+        margin-bottom: 15px;
+    }
     
+}
+@media (min-width:992px){
+    .footer-site .col-layout-left-side .footer-listing{
+        display: block !important;
+    }
 }
 @media (max-width:991px){
     h1 {
@@ -1024,15 +1052,14 @@ h2 {
     h2 {
         font-size: 24px;
     }
+    .our-team-slider-outer-wrapper h3 {
+        font-size: 18px;
+    }
     .container {
         padding: 0 15px;
     }
     .banner-section .banner-form h2 {
         font-size: 22px;
-    }
-    .footer-site .col-layout-right-side .inner-content-wrapper a {
-        font-size: 18px;
-        margin-right: 0;
     }
     .contact-detail ul li a {
         font-size: 16px;
@@ -1057,7 +1084,7 @@ h2 {
         font-size: 18px;
     }
     .categories-section ul li {
-        font-size: 18px;
+        font-size: 16px;
     }
     .banner-content .image-block {
         margin-bottom: 15px;
@@ -1087,7 +1114,7 @@ h2 {
     max-width: 20px;
 }
 .footer-site .col-layout-left-side .footer-menu-title a {
-    margin-bottom: 15px;
+    margin-bottom: 0;
 }
 
 .pitman-trainees-section .content-wrap .pitman-traine-right-side {
@@ -1100,6 +1127,26 @@ h2 {
     flex: 0 0 100%;
     max-width: 100%;
     margin-bottom: 30px;
+}
+.footer-site .col-layout-left-side .col-layout .footer-listing{
+    display: none;
+}
+.footer-site .col-layout-left-inner-wrapper .col-layout-left-inner .col-layout-wrapper {
+    flex-wrap: wrap;
+}
+.footer-site .col-layout-left-inner-wrapper .col-layout-left-inner {
+    margin-bottom: 0;
+}
+.footer-site .col-layout-left-side .col-layout {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.footer-site .col-layout-left-side .footer-menu-title .down-arrow {
+    display: block;
+}
+.footer-site .col-layout-left-side .active.footer-menu-title .down-arrow {
+    transform: rotate(180deg);
 }
 }
 @media (max-width:820px){
@@ -1117,6 +1164,7 @@ h2 {
         flex: 0 0 100%;
         max-width: 500px;
     }
+    
 }
 @media (max-width:767px){
     .container {
@@ -1138,12 +1186,15 @@ h2 {
     .humberger-icon{
         display: block;
         margin-right: 10px;
+        height: 24px;
     }
     .humberger-icon span{
         display: block;
         background-color: #005896;        
         height: 4px;
         width: 31px;
+    }
+    .humberger-icon span{
         margin-bottom: 5px;
     }
     span:nth-child(1){
@@ -1229,17 +1280,8 @@ h2 {
     .top-resons-wrapper {
         flex-wrap: wrap;   
      }
-     .top-resons-wrapper .top-resons-inner-wrapper .accordin-title {
-        margin-bottom: 20px;
-    }
-    .top-reasons .top-reasons-accordin-inner-wrapper .accordin-content {
-        margin: -20px 0 20px;
-    }
     .categories-section ul li {
         margin-bottom: 30px;
-    }
-    .categories-section ul {
-        column-count: 2;
     }
     .pitman-trainees-section p {
         font-size: 18px;
@@ -1247,29 +1289,16 @@ h2 {
     .pitman-trainees-section .content-wrap .pitman-traine-right-side {
         padding: 15px 0;
     }
-    .footer-site .col-layout-left-side .col-layout .footer-listing{
-        display: none;
-    }
-    .footer-site .col-layout-left-inner-wrapper .col-layout-left-inner .col-layout-wrapper {
-        flex-wrap: wrap;
-    }
-    .footer-site .col-layout-left-inner-wrapper .col-layout-left-inner {
-        margin-bottom: 0;
-    }
-    .footer-site .col-layout-left-side .col-layout {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-    .footer-site .col-layout-left-side .footer-menu-title .down-arrow {
-        display: block;
-    }
-    .footer-site .col-layout-left-side .active.footer-menu-title .down-arrow {
-        transform: rotate(180deg);
-    }
+    .categories-section ul li {
+        flex: 0 0 50%;
+        max-width: 50%;
+}
+.top-resons-wrapper .top-resons-inner-wrapper .accordin-items {
+    margin-bottom: 15px;
+}
 }
 @media (max-width: 667px){
-    .pitman-trainees-section .image-block img { 
+    .pitman-trainees-section .image-block{ 
         display: none;
     }
 }
@@ -1298,7 +1327,6 @@ h2 {
 .review-section p {
     font-size: 18px;
     margin-bottom: 0;
-    line-height: 1.3;
 }
 .review-section {
     padding: 20px 0;
@@ -1306,13 +1334,13 @@ h2 {
 .our-centers .content-wrap {
     padding: 20px 0;
 }
-.top-reasons .content-wrap {
-    padding: 20px 0;
-}
 .categories-section {
     padding: 20px 0;
 }
 .footer-site {
+    padding: 20px 0;
+}
+.footer-site .footer-col-layout-wrapper {
     padding: 20px 0;
 }
 .our-team-section {
@@ -1322,17 +1350,55 @@ h2 {
     padding: 15px;
     font-size: 16px;
 }
-.our-centers .content-wrap .our-centers-list .list-item {
-    margin: 8px;
-}
 .top-reasons .top-reasons-accordin-inner-wrapper .accordin-title {
     padding: 20px;
 }
 .categories-section ul li {
     margin-bottom: 20px;
 }
-.categories-section ul {
-    column-count: 1;
+.categories-section ul li {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.our-centers .content-wrap .our-centers-list .list-item {
+    padding: 0 5px;
+    margin-bottom: 10px;
+}
+.our-team-section .our-team-content p {
+    font-size: 14px;
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .accordin-title {
+    font-size: 14px;
+}
+.top-reasons .top-reasons-accordin-inner-wrapper .accordin-content p {
+    font-size: 14px;
+}
+.categories-section ul li {
+    font-size: 14px;
+}
+
+body {
+    font-size: 14px;
+}
+.banner-form .form-control::placeholder {
+    font-size: 12px;
+}
+.banner-form .form-control::-webkit-input-placeholder {
+    font-size: 12px;
+
+}
+
+.banner-form .form-control::-moz-placeholder {
+    font-size: 12px;
+
+}
+
+.banner-form .form-control:-ms-input-placeholder {
+    font-size: 12px;
+
+}
+.banner-form .form-outer-wrap .form-inner-wrap .form-control {
+    margin-bottom: 20px;
 }
 }
 @media (max-width:375px){
@@ -1348,16 +1414,12 @@ h2 {
     .review-section p {
         font-size: 16px;
         margin-bottom: 0;
-        line-height: 1.3;
     }
     .review-section .review-image-block img {
         max-width: 130px;
     }
     .our-centers .content-wrap .our-centers-list .list-item .list-item-inner {
         font-size: 14px;
-    }
-    .our-centers .content-wrap .our-centers-list .list-item {
-        margin: 5px;
     }
     .top-reasons .top-reasons-accordin-inner-wrapper .accordin-title::after {
         width: 11px;

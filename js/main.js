@@ -40,22 +40,26 @@ jQuery(document).ready(function(){
   
 
   jQuery('.accordin-title').click(function(){
-    jQuery(this).closest('.top-reasons-accordin-inner-wrapper').find('.accordin-content').slideToggle()
-    jQuery(this).closest('.top-reasons-accordin-inner-wrapper').siblings().find('.accordin-content').slideUp()
+    jQuery(this).closest('.top-reasons-accordin-inner-wrapper').find('.accordin-content').stop(true,true).slideToggle()
+    jQuery(this).closest('.top-reasons-accordin-inner-wrapper').siblings().find('.accordin-content').stop(true,true).slideUp()
+    jQuery(this).closest('.top-resons-inner-wrapper').siblings().find('.accordin-content').stop(true,true).slideUp()
     jQuery(this).closest('.top-reasons-accordin-inner-wrapper').find('.accordin-items').toggleClass("active");
     jQuery(this).closest('.top-reasons-accordin-inner-wrapper').siblings().find('.accordin-items').removeClass("active");
+    jQuery(this).closest('.top-resons-inner-wrapper').siblings().find('.accordin-items').removeClass("active");
 
 
   });
 
-  jQuery('.footer-menu-title').click(function(e){
-    e.preventDefault();
-    jQuery(this).closest('.footer-site .col-layout-left-side .col-layout').find('.footer-listing').slideToggle()
-    jQuery(this).closest('.footer-site .col-layout-left-side .col-layout').siblings().find('.footer-listing').slideUp()
+  jQuery('.down-arrow').click(function(){
+    if(jQuery(window).width() < 991)
+    {
+    jQuery(this).closest('.footer-site .col-layout-left-side .col-layout').find('.footer-listing').stop(true,true).slideToggle("slow")
+    jQuery(this).closest('.footer-site .col-layout-left-side .col-layout').siblings().find('.footer-listing').stop(true,true).slideUp("slow")
     jQuery(this).closest('.footer-site .col-layout-left-side .col-layout').find('.footer-menu-title').toggleClass("active");
     jQuery(this).closest('.footer-site .col-layout-left-side .col-layout').siblings().find('.footer-menu-title').removeClass("active");
-
+}
   }); 
+  
 
   
   });
